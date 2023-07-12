@@ -14,9 +14,49 @@ Poslední dva body (tabulky) necháme na jindy a nejprve se budeme věnovat osta
 
 ## Nastavení parametrů a uložení vypočtených hodnot
 
-```
+```{python}
 K = 1
 r = 2
 x = 0.5
 rychlost = r*x*(1-x/K)
 ```
+
+## Nastavení hodnot pro postupné opakované provádění operací v cyklu
+
+```{python}
+stromy = ["topol","javor","buk"]
+for strom in stromy:
+    print (f"zpracovavam {strom}")
+```
+
+## Nastavení definičního oboru pro funkce
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+t = np.linspace(0,10,300)
+plt.plot(t,np.sin(t))
+```
+
+## Vytvoření pole s vypočtenými daty
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+N = 300
+seznam_k = list(range(1,6))
+t = np.linspace(0,3.14,N)
+
+X = np.zeros((N,len(seznam_k)))
+
+for i,k in enumerate(seznam_k):
+    X[:,i] = np.sin(k*t)
+
+plt.plot(t,X)
+plt.legend(seznam_k)
+plt.show()
+
+
+```
+ 
