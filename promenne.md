@@ -24,12 +24,25 @@ rychlost = r*x*(1-x/K)
 ## Nastavení hodnot pro postupné opakované provádění operací v cyklu
 
 ```{python}
-stromy = ["topol","javor","buk"]
+stromy = ["topol","javor","buk","akát","jírovec"]
 for strom in stromy:
     print (f"zpracovavam {strom}")
 ```
 
+Pokud potřebujeme sledovat informaci, kolikátá otočka cyklu se provádí, použijeme příkaz `enumerate`.
+
+```{python}
+stromy = ["topol","javor","buk","akát","jírovec"]
+for i,strom in enumerate(stromy):
+    print (f"zpracovavam {strom}, v seznamu položa s indexem {i}")
+```
+
+
 ## Nastavení definičního oboru pro funkce
+ 
+Nejčastěji proměnnou tohoto typu tvoříme pomocí příkazu `linspace` knihovny `numpy`. K tomu, aby byl tento příkaz přístupný, si musíme knihovnu numpy naimportovat. Parametry příkazu jsou počáteční a koncový bod intervalu. Třetí nepovinný parametr značí počet bodů uvažovaných z tohoto intervalu. 
+
+Následující ukázka do proměnné `t` uloží 300 hodnot rovnoměrně rozdělených na intervalu $[0,10]$. Jak ukázka použití je vykrelsení grafu funkce sinus. Tato funkce je součástí balíčku `numpy` a graf vykreslujeme pomocí knihovny `matplotlib`.
 
 ```{python}
 import numpy as np
